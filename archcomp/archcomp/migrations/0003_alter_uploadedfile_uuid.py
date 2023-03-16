@@ -14,7 +14,10 @@ class Migration(migrations.Migration):
             model_name="uploadedfile",
             name="uuid",
             field=models.CharField(
-                editable=False, max_length=255, primary_key=True, serialize=False
+                editable=False,
+                max_length=255,
+                primary_key=True,
+                serialize=False,
             ),
         ),
     ]

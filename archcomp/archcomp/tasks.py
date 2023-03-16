@@ -23,11 +23,14 @@ def process_file(uuid):
             ]
         )
 
-        cfg_string = f'(include "models.cfg")\n(set-log "validation-log.csv")\n(set-report "validation-report.csv")\n(validate "{uploaded_file_obj.filename}")'
+        cfg_string = f'(include "models.cfg")\n(set-log "validation-log.csv")\
+        \n(set-report "validation-report.csv")\n(validate "{uploaded_file_obj.filename}")'
 
         filename_withoutext = uploaded_file_obj.filename.split(".")[0]
         with open(
-            os.path.join(uploaded_file_obj.folderpath, f"{filename_withoutext}.cfg"),
+            os.path.join(
+                uploaded_file_obj.folderpath, f"{filename_withoutext}.cfg"
+            ),
             "w",
         ) as f:
             f.write(cfg_string)

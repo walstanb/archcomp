@@ -67,7 +67,9 @@ def download_file(request, uuid, filename):
     file_path = os.path.join(settings.MEDIA_ROOT, uuid, filename)
     if os.path.exists(file_path):
         with open(file_path, "rb") as fh:
-            response = HttpResponse(fh.read(), content_type="application/octet-stream")
+            response = HttpResponse(
+                fh.read(), content_type="application/octet-stream"
+            )
             response[
                 "Content-Disposition"
             ] = "attachment; filename=" + os.path.basename(file_path)
