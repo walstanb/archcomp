@@ -1,1 +1,1 @@
-default_app_config = 'archcomp.apps.ArchcompConfig'
+default_app_config = "archcomp.apps.ArchcompConfig"

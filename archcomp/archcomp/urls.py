@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-urlpatterns = [
-    path('', views.upload_file, name='upload_file'),
-    path('upload', views.upload_file, name='upload_file'),
 
-    path('download/<str:uuid>/<str:filename>', views.download_file, name='download_file'),
-    path('api/status/<str:uuid>/', views.get_status, name='get_status'),
-    path('admin/', admin.site.urls),
+urlpatterns = [
+    path("", views.upload_file, name="upload_file"),
+    path("upload", views.upload_file, name="upload_file"),
+    path(
+        "download/<str:uuid>/<str:filename>", views.download_file, name="download_file"
+    ),
+    path("api/status/<str:uuid>/", views.get_status, name="get_status"),
+    path("admin/", admin.site.urls),
 ]

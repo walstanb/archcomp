@@ -1,7 +1,8 @@
 from django.apps import AppConfig
 
+
 class ArchcompConfig(AppConfig):
-    name = 'archcomp'
+    name = "archcomp"
 
     def ready(self):
         from .models import UploadedFile

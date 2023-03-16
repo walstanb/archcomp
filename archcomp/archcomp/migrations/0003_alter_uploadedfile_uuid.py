@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('archcomp', '0002_uploadedfile_folderpath_alter_uploadedfile_uuid'),
+        ("archcomp", "0002_uploadedfile_folderpath_alter_uploadedfile_uuid"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='uploadedfile',
-            name='uuid',
-            field=models.CharField(editable=False, max_length=255, primary_key=True, serialize=False),
+            model_name="uploadedfile",
+            name="uuid",
+            field=models.CharField(
+                editable=False, max_length=255, primary_key=True, serialize=False
+            ),
         ),
     ]
